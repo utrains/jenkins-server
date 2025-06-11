@@ -180,9 +180,9 @@ resource "aws_instance" "ec2-instance" {
 # ~~~~~~ Print the link to be redirected to the jenkins server ~~~~~ #
 
 output "INFO" {
-  value = "AWS Resources and your instance has been provisioned. Go to http://${aws_instance.ec2-instance.public_ip}:80"
+  value = "AWS Resources and your instance has been provisioned. Go to http://${aws_instance.ec2-instance.public_ip}:8080"
 }
 
 output "INFO-2" {
-  value = "To ssh your ec2 instance, use  Go to ssh -i 'ec2-key-1.pem' ec2-user@${aws_instance.ec2-instance.public_ip}"
+  value = "To ssh your ec2 instance, use ssh -i 'ec2-key-1.pem' ec2-user@${aws_instance.ec2-instance.public_ip}"
 }
